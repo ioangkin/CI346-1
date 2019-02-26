@@ -2,10 +2,43 @@
 
 ### Programming Languages
 
-**Object-oriented Paradigm** - TODO
 
-**Functional Paradigm** - TODO
+**Programming Paradigm** - A way to classify programming languages based on their features ([Source](https://en.wikipedia.org/wiki/Programming_paradigm/)). In other words, the style or “way,” of programming.
+Note: We don't use the phrase “programming language paradigm.” A paradigm is a way of doing something (like programming), we rather talk about particular paradigms such as: "Object-oriented Paradigm" and "Functional Paradigm" [Source](http://cs.lmu.edu/~ray/notes/paradigms/)
 
+
+**Object-oriented Paradigm** - [Programming] based on the concept of "objects", which may contain data, in the form of fields, often known as attributes; and code, in the form of procedures, often known as methods.
+[Source](https://en.wikipedia.org/wiki/Object-oriented_programming)
+__Example:__
+```
+ class Greeting {
+  	void greet(Named target) {
+			System.out.println("Hello, " + target.getName() + "!");
+  	}
+ }
+
+ interface Named {
+  	String getName();
+ }
+
+ class World implements Named {
+  	String getName() {
+			return "World";
+  	}
+ }
+
+ class Main {
+  	public static void main( String[] args ) {
+			Greeting greeting = new Greeting();
+			greeting.greet(new World());
+  	}
+ }
+// [Source](http://wiki.c2.com/?HelloWorldInManyProgrammingLanguages/)
+```
+
+
+**Functional Paradigm** - "Programming with function calls that avoid any global state." [Source](http://cs.lmu.edu/~ray/notes/paradigms/)
+__Example:__ - TODO
 
 
 ### Concurrency
